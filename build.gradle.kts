@@ -17,11 +17,25 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	implementation("javax.transaction:javax.transaction-api")
+	implementation("org.hibernate:hibernate-entitymanager")
+	implementation("org.hibernate.validator:hibernate-validator")
+	implementation("org.flywaydb:flyway-core:5.2.4")
+	implementation("org.postgresql:postgresql")
+
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9")
+
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+	testImplementation("com.ninja-squad:springmockk:1.1.2")
+	testImplementation("org.testcontainers:postgresql:1.10.5")
 }
 
 tasks.withType<Test> {
