@@ -1,4 +1,4 @@
-package com.bp.app.account
+package com.bp.app.account.domain
 
 import java.io.Serializable
 import javax.persistence.Column

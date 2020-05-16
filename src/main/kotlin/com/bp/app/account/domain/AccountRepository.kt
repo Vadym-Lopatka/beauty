@@ -1,4 +1,4 @@
-package com.bp.app.account
+package com.bp.app.account.domain
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository

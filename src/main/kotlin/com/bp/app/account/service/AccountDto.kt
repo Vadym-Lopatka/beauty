@@ -1,4 +1,4 @@
-package com.bp.app.account
+package com.bp.app.account.service
 
 data class AccountDto(
     val id: Long,

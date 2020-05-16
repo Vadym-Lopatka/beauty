@@ -1,5 +1,7 @@
 package com.bp.app.account
 
+import com.bp.app.account.domain.AccountRepository
+import com.bp.app.account.service.AccountDto
 import com.bp.app.account.web.AccountController.Companion.ACCOUNT_URL
 import com.bp.app.account.web.request.SignUpRequest
 import org.assertj.core.api.Assertions.assertThat

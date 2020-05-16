@@ -1,6 +1,6 @@
 package com.bp.app.account.web
 
-import com.bp.app.account.AccountDto
+import com.bp.app.account.service.AccountDto
 import com.bp.app.account.service.AccountService
 import com.bp.app.account.web.AccountController.Companion.ACCOUNT_URL
 import com.bp.app.account.web.request.SignUpRequest
