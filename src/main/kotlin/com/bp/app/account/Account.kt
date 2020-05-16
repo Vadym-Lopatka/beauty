@@ -1,4 +1,4 @@
-package com.bp.app.profile
+package com.bp.app.account
 
 import java.io.Serializable
 import javax.persistence.Column
@@ -10,8 +10,8 @@ import javax.persistence.Table
 import javax.validation.constraints.NotNull
 
 @Entity
-@Table(name = "profile")
-class Profile(
+@Table(name = "account")
+class Account(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +31,7 @@ class Profile(
 
 ) : Serializable {
 
-    override fun toString() = "Profile{" +
+    override fun toString() = "Account{" +
         "id=$id" +
         ", phone='$phone'" +
         ", email='$email'" +

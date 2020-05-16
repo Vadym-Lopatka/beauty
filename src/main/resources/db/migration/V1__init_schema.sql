@@ -1,4 +1,4 @@
-CREATE TABLE profile (
+CREATE TABLE account (
     id SERIAL PRIMARY KEY,
     phone character varying(30) NOT NULL,
     email character varying(255) NOT NULL,
