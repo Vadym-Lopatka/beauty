@@ -18,16 +18,20 @@ class Account(
     var id: Long? = null,
 
     @get: NotNull
-    @Column(name = "brand_id", nullable = false)
+    @Column(name = "phone", nullable = false)
     var phone: String? = null,
 
     @get: NotNull
-    @Column(name = "name", nullable = false)
+    @Column(name = "email", nullable = false)
     var email: String? = null,
 
     @get: NotNull
-    @Column(name = "subject", nullable = false)
-    var name: String? = null
+    @Column(name = "name", nullable = false)
+    var name: String? = null,
+
+    @get: NotNull
+    @Column(name = "password", nullable = false)
+    var password: String? = null
 
 ) : Serializable {
 
