@@ -19,6 +19,15 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+
+	implementation("org.springframework.security:spring-security-config")
+	implementation("org.springframework.security:spring-security-data")
+	implementation("org.springframework.security:spring-security-web")
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	implementation("io.jsonwebtoken:jjwt-jackson:0.11.1")
+	implementation("io.jsonwebtoken:jjwt-impl:0.11.1")
+
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -31,7 +40,7 @@ dependencies {
 
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9")
 
-
+	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
