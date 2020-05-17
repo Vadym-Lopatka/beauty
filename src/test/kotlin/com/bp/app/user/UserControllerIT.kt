@@ -1,9 +1,9 @@
-package com.bp.app.account
+package com.bp.app.user
 
-import com.bp.app.account.domain.AccountRepository
-import com.bp.app.account.service.AccountDto
-import com.bp.app.account.web.AccountController.Companion.ACCOUNT_URL
-import com.bp.app.account.web.request.SignUpRequest
+import com.bp.app.user.domain.UserRepository
+import com.bp.app.user.service.UserDto
+import com.bp.app.user.web.UserController.Companion.USER_URL
+import com.bp.app.user.web.request.SignUpRequest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
@@ -14,26 +14,26 @@ import org.springframework.http.HttpEntity
 import org.springframework.http.HttpMethod
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class AccountControllerIT {
+class UserControllerIT {
 
     @Autowired
     private lateinit var testRestTemplate: TestRestTemplate
 
     @Autowired
-    private lateinit var accountRepository: AccountRepository
+    private lateinit var userRepository: UserRepository
 
     @Test
     fun `should sign-up client`() {
         // given
         val signUpRequest = buildSignUpRequest()
-        val sizeBefore = accountRepository.findAll().size
+        val sizeBefore = userRepository.findAll().size
 
         // when
         val httpRequest = HttpEntity(signUpRequest)
-        val response = testRestTemplate.exchange(ACCOUNT_URL, HttpMethod.POST, httpRequest, AccountDto::class.java)
+        val response = testRestTemplate.exchange(USER_URL, HttpMethod.POST, httpRequest, UserDto::class.java)
         assertTrue(response.statusCode.is2xxSuccessful)
         val account = response.body!!
-        val sizeAfter = accountRepository.findAll().size
+        val sizeAfter = userRepository.findAll().size
 
         //then
         assertThat(sizeBefore + 1).isEqualTo(sizeAfter)

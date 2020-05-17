@@ -1,6 +1,6 @@
-package com.bp.app.account.web.request
+package com.bp.app.user.web.request
 
-import com.bp.app.account.domain.Account
+import com.bp.app.user.domain.User
 
 data class SignUpRequest(
     val name: String,
@@ -9,7 +9,7 @@ data class SignUpRequest(
     val password: String
 )
 
-fun SignUpRequest.toEntity() = Account(
+fun SignUpRequest.toEntity() = User(
     name = name,
     phone = phone,
     email = email,

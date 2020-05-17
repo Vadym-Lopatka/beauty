@@ -1,6 +1,6 @@
-package com.bp.app.account.service
+package com.bp.app.user.service
 
-data class AccountDto(
+data class UserDto(
     val id: Long,
     val name: String,
     val phone: String,
